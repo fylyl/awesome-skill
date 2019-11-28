@@ -1,0 +1,87 @@
+git 使用操作
+
+一：fork，创建个人远程库
+
+二：clone 个人远程库到本地，并创建 git remote 库
+将服务器的 SSH Keys：~/.ssh/id_rsa.pub 复制到个人远程库
+ssh-keygen 可生成 SSH Keys
+
+git clone ssh://...test.git test-git(目录名)
+此时只有个人的 master
+
+添加个人远程库到 git remote，并改名字为 test
+git remote add test ssh://...test.git
+
+添加公共远程库到 git remote，并改名字为 com
+git remote add com ssh://...com.git
+
+三：把 remote 库的某个分支 pull 到本地 git 分支，并取名字
+git pull remote库 远程分支：本地 git 分支
+
+git pull test 远程分支：test_001
+git branch：多了个分支 test_001
+
+git pull com 远程分支：com_001
+git branch：多了个分支 com_001
+
+四：If you wish to set tracking information for this branch you can do so with:
+git branch --set-upstream-to=<remote>/<branch> test_001
+
+git branch --set-upstream-to=远程库test/分支 test_001
+git branch --set-upstream-to=远程库com/分支 com_001
+
+五：配置 git 基本信息
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+注意：使用 --global 参数，表示这台机器上所有的 git 仓库都会使用这个配置
+
+六：同步 com 远程分支与本地分支 test_001
+先同步 com 远程库到 git
+git checkout com_001
+git pull：同步 com 远程分支到本地 com_001
+
+合并 com_001 与 test_001，更新 test_001，解决冲突
+git checkout test_001
+git merge com_001
+
+七：文件修改后，提交前的操作
+第1：git commit
+第2：单个添加  git add xxx.txt
+第3：git commit  写下备注
+
+八：提交到远程的个人库某个分支
+git push 远程库 本地 git 分支：远程分支
+git push test test_001:远程分支
+
+九：基本操作
+1. 给分支取个名字
+git branch test_001(new) aaa222(old)
+
+2. 切换分支
+git checkout test_001
+
+3. 删除分支
+git branch --delete test_001
+
+4. 查看远程库
+git remote -v
+
+5. 删除远程文件夹，但保留本地文件夹
+git rm --cached -r xxx/
+
+6. 查看提交记录
+tig
+
+7. 查看基本状态
+git status
+
+8. 查看分支
+git branch
+
+9. 查看所有分支
+git branch -a
+
+done!!!!!
