@@ -6,22 +6,27 @@ apt-get install emacs
 第2： 安装 zsh
 apt-get install zsh
 
+设置terminal的shell环境默认为zsh，输入以下命令：
+chsh -s `which zsh`
+
 第3： 安装 oh-my-zsh
-从这个网址 https://github.com/robbyrussell/oh-my-zsh 下载 oh-my-zsh
-把安装包放到 /root/ 下，并修改名字为：.oh-my-zsh
-cp /root/.oh-my-zsh/templates/zshrc.zsh-template /root/.zshrc
+从这个网址  https://github.com/robbyrussell/oh-my-zsh 下载 oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+把安装包放到 ~/ 下，并修改名字为：.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 安装插件 autojump：apt-get install autojump
 安装插件 history-substring-search：
-在 /root/.oh-my-zsh/plugins/history-substring-search/ 目录下 source zsh-history-substring-search.zsh
+在 ~/.oh-my-zsh/plugins/history-substring-search/ 目录下 source zsh-history-substring-search.zsh
 
-修改配置文件：vim /root/.zshrc
+修改配置文件：vim ~/.zshrc
 主题：ZSH_THEME="ys"
 插件：plugins=(git history-substring-search autojump)
 时间：HIST_STAMPS="yyyy-mm-dd"
 
-启动zsh：zsh 便启动
-更新 zsh 配置文件：source /root/.zshrc，以后所有环境变量都应该放在该文件里 /root/.zshrc
+启动zsh，命令：zsh
+更新 zsh 配置文件：source ~/.zshrc
+以后所有环境变量都应该放在该文件里 ~/.zshrc
 
 查看 autojump 状态： j --stat
 搜索命令历史记录：ctrl-r
@@ -30,6 +35,10 @@ cp /root/.oh-my-zsh/templates/zshrc.zsh-template /root/.zshrc
 在 .zshrc 时配置环境变量
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+设置zsh替换掉原有的shell
+chsh -s /bin/zsh
+重启
 
 export PATH=$PATH:.../Spark/spark/bin
 export PATH=$PATH:.../HDFS/hadoop/bin
