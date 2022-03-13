@@ -12,3 +12,5 @@ channels:
   - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
 show_channel_urls: true
 
+pip配置清华源：
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
