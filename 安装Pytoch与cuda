@@ -1,10 +1,21 @@
-安装cuda与cudnn
+安装cuda与cudnn：
 https://codingchaozhang.blog.csdn.net/article/details/99688839?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&utm_relevant_index=2
 https://www.cnblogs.com/guan-zl/p/12986253.html
 
-pytorch离线安装
+pytorch离线安装：
+装pytorch与cuda版本要去pytorch官网查询一下，别乱装版本
 https://blog.csdn.net/L1778586311/article/details/112425993
 https://download.pytorch.org/whl/torch_stable.html
 
-pytorch卸载
+pytorch卸载：
 https://blog.csdn.net/mao_hui_fei/article/details/112078113
+
+pytorch与torchvision搭配查询：
+https://github.com/pytorch/vision#installation
+
+可用的搭配版本：
+python=3.6
+pytorch==1.10.0
+torchvision==0.11.1
+cudatoolkit=11.3
+opencv-python==4.4.0.46
