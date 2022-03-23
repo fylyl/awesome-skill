@@ -1,0 +1,85 @@
+安装cuda与cudnn：
+https://codingchaozhang.blog.csdn.net/article/details/99688839?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&utm_relevant_index=2
+https://www.cnblogs.com/guan-zl/p/12986253.html
+
+pytorch离线安装：
+装pytorch与cuda版本要去pytorch官网查询一下，别乱装版本
+https://blog.csdn.net/L1778586311/article/details/112425993
+https://download.pytorch.org/whl/torch_stable.html
+
+pytorch卸载：
+https://blog.csdn.net/mao_hui_fei/article/details/112078113
+
+pytorch与torchvision搭配查询：
+https://github.com/pytorch/vision#installation
+
+可用的搭配版本：
+python=3.6
+pytorch==1.10.0
+torchvision==0.11.1
+cudatoolkit=11.3
+opencv-python==4.4.0.46
+
+
+优质安装过程：
+一：解决pip安装时出现SSLError的问题：
+https://blog.csdn.net/wang_jiapeng/article/details/88786766
+请用阿里云源：https://www.codeleading.com/article/82315110698/
+
+pip.ini
+[global]  
+index-url = http://mirrors.aliyun.com/pypi/simple/
+trusted-host = mirrors.aliyun.com
+disable-pip-version-check = true
+timeout = 120  
+
+[list]
+format = columns
+
+
+二：
+conda create -n name python=3.8
+
+
+三：离线安装pytorch
+https://blog.csdn.net/L1778586311/article/details/112425993
+
+pytorch离线安装包网址：https://download.pytorch.org/whl/torch_stable.html
+选择：cu102/torch-1.8.1%2Bcu102-cp38-cp38-win_amd64.whl
+pip install ***.whl
+
+pytorch=1.8.1
+torchvision==0.9.1
+
+python=3.8
+cudatoolkit=10.2
+pytorch=1.8.1
+pip install opencv_python==4.4.0.46
+pip install albumentations==0.5.1 --no-binary=imgaug,albumentations
+pip install ray>=1.0.1
+conda install einops==0.3.0
+pip install kornia==0.4.1
+pip install loguru==0.5.3
+pip install yacs>=0.1.8
+pip install tqdm
+pip install autopep8
+pip install pylint
+pip install ipython
+pip install jupyterlab
+pip install matplotlib==3.4
+pip install h5py==3.1.0
+pip install pytorch-lightning==1.3.5
+pip install joblib>=1.0.1
+
+四：
+错误一：
+错误: RuntimeError: Distributed package doesn’t have NCCL built in|PyTorch踩坑
+https://www.zhaoyabo.com/?p=8251
+
+
+错误二：虚拟环境中，cmd无法运行shell脚本
+https://blog.csdn.net/shenquanyue/article/details/82733536?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&utm_relevant_index=1
+conda install m2-base
+然后 bash test.sh
+
+
