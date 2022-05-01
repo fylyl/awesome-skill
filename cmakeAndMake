@@ -1,6 +1,6 @@
-# 一：https://gavinliu6.github.io/CMake-Practice-zh-CN/#/acquaintance
+一：https://gavinliu6.github.io/CMake-Practice-zh-CN/#/acquaintance
 
-## CMakeLists.txt
+CMakeLists.txt
 
 PROJECT(LYL)
 SET(SRC_LIST main.c)
