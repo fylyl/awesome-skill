@@ -30,4 +30,6 @@ ${PROJECT_BINARY_DIR}/bin：可执行二进制的输出路径为 build/bin
 ${PROJECT_BINARY_DIR}/lib：库的输出路径为 build/lib
 
 
+CMAKE_INSTALL_PREFIX
+
 
