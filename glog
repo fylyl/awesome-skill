@@ -1,0 +1,20 @@
+一：ubuntu下编译、安装及使用glog
+https://blog.csdn.net/kenstandlee/article/details/117031392
+
+git clone https://github.com/google/glog
+cd glog
+
+mkdir build
+cd build
+
+cmake -DGFLAGS_NAMESPACE=google -DCMAKE_CXX_FLAGS=-fPIC -DBUILD_SHARED_LIBS=ON ..
+
+make -j12
+make install
+
+安装后：
+# glog的头文件位于/usr/local/include
+# glog的库文件位于/usr/local/lib
+
+二：教程
+https://blog.csdn.net/willinux20130812/article/details/91366167?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-91366167-blog-122503110.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-91366167-blog-122503110.pc_relevant_default&utm_relevant_index=6
