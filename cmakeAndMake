@@ -1,3 +1,24 @@
+######################### cmake #########################
+cmake --version
+
+移除已安装
+sudo apt remove cmake
+
+下载
+https://gitlab.kitware.com/cmake/cmake
+
+安装
+./bootstrap
+make -j12
+make install
+
+camke: 未找到命令...
+vi ~/.zshrc
+export PATH=$PATH:/.../bin
+source ~/.zshrc
+######################### cmake #########################
+
+
 一：https://gavinliu6.github.io/CMake-Practice-zh-CN/#/acquaintance
 
 CMakeLists.txt
